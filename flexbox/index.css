@@ -1,0 +1,98 @@
+.container {
+    background: beige;
+    height: 100vh;
+    /* flexbox로 설정하기 */
+    display: flex;
+    /* flexbox 방향 정하기, row, column, row-reverse, column-reverse */
+    flex-direction: row;
+    /* wrap(한줄에 차면 다음줄로) 쓸지 말지, 기본이 nowrap */
+    flex-wrap: nowrap;
+    /* flex-direction + flex-wrap */
+    /*flex-flow: column nowrap;*/
+
+    /*
+        아이템 배치 방식 정하기 (중심축에서)
+        flex-start: 기본값, 왼쪽 -> 오른쪽 또는 위 -> 아래
+        flex-end: 반대
+        center: 중앙
+        space-around: 박스를 둘러싸게 공간을 넣어줌
+        space-evenly: 똑같은 간격으로
+        space-between
+    */
+    justify-content: space-around;
+
+    align-items: baseline;
+    /*
+        반대축으로 아이템 배치 방식 정하기
+     */
+    align-content: space-between;
+}
+
+.item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.item1 {
+    background: #ef9a9a;
+    /*아이템 순서 정하기*/
+    /*order: 2;*/
+    /*
+        레이아웃 크기가 늘어날 수록 아이템 크기를 늘릴지 설정
+        0: 기본값 (안늘어남)
+        1: 늘어남
+        2: 두배로 늘어남 (다른 아이템에 비교 가능)
+    */
+    flex-grow: 1;
+    /*
+        레이아웃 크기가 줄어들수록 아이템 크기를 줄일지 설정
+    */
+    flex-shrink: 1;
+    /*
+        flex-grow와 flex-shrink를 기본값으로 설정했을 때,
+        레이아웃 크기가 줄어들때와 늘어날 때 아이템 크기를 어느 비율로 할지 설정
+        auto: 기본값
+    */
+    flex-basis: 30%;
+    /*flex: 2(grow) 2(shrink) auto(basis);*/
+
+    /*컨테이너와 관련없이 자기 자신 아이템 하나만 따로 위치를 설정*/
+    align-self: center;
+}
+
+.item2 {
+    background: #ce93d8;
+}
+
+.item3 {
+    background: #9fa8da;
+}
+
+.item4 {
+    background: #81d4fa;
+}
+
+.item5 {
+    background: #80cbc4;
+}
+
+.item6 {
+    background: #c5e1a5;
+}
+
+.item7 {
+    background: #fff59d;
+}
+
+.item8 {
+    background: #ffcc80;
+}
+
+.item9 {
+    background: #bcaaa4;
+}
+
+.item10 {
+    background: #b0bec5;
+}
